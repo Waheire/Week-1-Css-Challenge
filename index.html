@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Fruit Consultancy</title>
 </head>
 
@@ -16,7 +17,7 @@
         <div class="header">
             <!-- logo -->
             <div class="logo">
-                <h1>Fruit</h1>
+                <h1 class=""> <i class="fa fa-apple fa-lg " aria-hidden="true"></i></i>Apple Insurance</h1>
             </div>
             <!-- navigation left side -->
             <div class="navigation-center">
@@ -46,7 +47,40 @@
                     </li>
                 </ul>
             </div>
+
         </div>
+        <div class="mobile-nav">
+            <div class="logo-mobile">
+                <h1 class=""> <i class="fa fa-apple fa-lg " aria-hidden="true"></i></i>Apple</h1>
+            </div>
+
+            <div class="menu-icon">
+                <a href="#" onclick="toggleMobileMenu()"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-navigation">
+                <ul class="mobile-nav-links">
+                    <li class="link-item">
+                        <a href="" class="link">Home</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="" class="link">Products</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="" class="link">Pricing</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="" class="link">Contact</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="" class="link">Login</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
         <!-- hero content -->
         <div class="hero-content">
             <div class="hero-heading">
@@ -177,13 +211,17 @@
     <div class="subscribe">
         <div class="inner-subscribe">
             <div class="subscribe-heading">
-                <h2>subscribe For Latest NewsLetter</h2>
+                <h2>subscribe For Latest <br>NewsLetter</h2>
             </div>
             <div class="subscribe-form">
-                <form action="">
-                    <input type="text" name="" id="">
-                    <label for="subscribe">Subscribe</label>
+                <div class="sub-input">
+                    <form action="">
+                </div>
+                <input type="text" name="" id="">
                 </form>
+                <div class="subscribe-btn">
+                    <button>Subscribe</input>
+                </div>
             </div>
         </div>
     </div>
@@ -418,6 +456,16 @@
     <!-- script tags -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            var x = document.querySelector(".mobile-menu");
+            if (x.className === "mobile-menu") {
+                x.className += " mobile-menu-active";
+            } else {
+                x.className = "mobile-menu";
+            }
+        }
+    </script>
 </body>
 
 </html>

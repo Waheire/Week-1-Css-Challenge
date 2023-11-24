@@ -35,18 +35,29 @@ li {
 
 /* header */
 .header {
-  padding: 30px;
+  padding-top: 1rem;
+  margin-left: 15%;
+  margin-right: 15%;
   display: flex;
-  justify-content: space-around;
-  height: 10%;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 10%; */
   text-align: center;
   animation: fade-in 3s;
   color: #fafafa;
 }
-
+.mobile-nav {
+  display: none !important;
+}
+.mobile-menu {
+  display: none !important;
+}
 .logo h1 {
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.logo i {
+  margin-right: 1rem;
 }
 
 .nav-links {
@@ -69,10 +80,11 @@ li {
 }
 
 .link-btn {
-  padding: 0.3rem;
+  padding: 1rem;
   background-color: #3a8bf5;
-  border-radius: 5px;
   border: none;
+  color: #ffff;
+  border-radius: 5%;
 }
 
 .hero-content {
@@ -114,8 +126,9 @@ li {
   font-weight: 400;
 }
 
-.button .active-btn button {
-  background-color: #3a8bf5;
+.active-btn {
+  background-color: #3a8bf5 !important;
+  border-style: none !important;
 }
 
 /* services */
@@ -289,15 +302,31 @@ li {
   align-items: center;
   height: 100px;
   color: #fafafa;
-  padding: 2rem;
+  padding: 4rem;
   margin: 4rem 0;
   background: linear-gradient(to right, #140c88, #c70bce);
+}
+
+.subscribe-heading {
+  width: 50%;
+}
+.subscribe-form {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.subscribe-btn button {
+  padding: 1rem 2rem;
+  border-radius: 5%;
+  border: none;
+  background-color: #3a8bf5;
+  color: #ffff;
 }
 
 /* branches section */
 .branches {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   background-color: #110e38;
   height: 600px;
@@ -593,15 +622,62 @@ input[type="submit"]:hover {
   font-weight: 400;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   /* hero */
   .hero {
     height: 100vh;
   }
 
   /* header */
+  /* header */
   .header {
+    display: none !important;
+  }
+  .mobile-nav {
+    display: flex !important;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 1rem;
+  }
+
+  .logo-mobile {
+    width: 50%;
+    color: #fff;
+    overflow: hidden;
+  }
+  .logo-mobile h1 {
+    font-size: 1rem;
+  }
+  .menu-icon {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    color: #fff;
+  }
+  .mobile-menu {
     display: none;
+  }
+  .mobile-menu-active {
+    display: flex !important;
+    width: 100%;
+    display: flex;
+    background-color: #3a8bf5;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+  .mobile-navigation {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-icon .fa{
+    color: #fff;
   }
 
   /* .services */
@@ -677,9 +753,25 @@ input[type="submit"]:hover {
   }
 
   /* sunscribe */
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
   .inner-subscribe {
-    height: 200px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    height: 200px;
+    padding: 2rem;
+    /* padding: top 2% !important; */
+    margin: 0;
+  }
+  .subscribe-heading {
+    width: 100%;
+  }
+  .subscribe-form {
+    width: 100%;
   }
 
   /* branches */
